@@ -18,7 +18,7 @@ export default function PlaceDetails({place,selected, refProp}) {
         <CardContent>
           <Typography gutterBottom variant="h5">{place.name}</Typography>
           <Box display="flex" justifyContent="space-between" my={1}>
-          <Rating name="read-only" value={Number(place.rating)} readOnly />
+         <Rating size='small' value={Number(place.rating)} readOnly/>
           <Typography component="legend">{place.num_reviews} review{place.num_reviews > 1 && 's'}</Typography>
         </Box>
           <Box display="flex" justifyContent="space-between">
