@@ -4,10 +4,9 @@ import useStyles from './style';
 import PlaceDetails from '../PlaceDetails/PlaceDetails';
 
 
-export default function List({places,childClicked,isLoading}) {
+export default function List({places,childClicked,isLoading,type,setType,rating,setRating}) {
   const classes=useStyles();
-  const[type,setType]=useState('Restaurants');
-  const[rating,setRating]=useState('');
+  
   console.log({childClicked});
 
   const [elRefs, setElRefs] = useState([]);
@@ -32,9 +31,9 @@ export default function List({places,childClicked,isLoading}) {
         <FormControl className={classes.formControl}>
           <InputLabel>Type</InputLabel>
           <Select value={type} onChange={(e)=>setType(e.target.value)}>
-            <MenuItem value="Restaurants">Restaurants</MenuItem>
-            <MenuItem value="Hotels">Hotels</MenuItem>
-            <MenuItem value="Attractions">Attractions</MenuItem>
+            <MenuItem value="restaurants">Restaurants</MenuItem>
+            <MenuItem value="hotels">Hotels</MenuItem>
+            <MenuItem value="attractions">Attractions</MenuItem>
           </Select>
         </FormControl>
 
